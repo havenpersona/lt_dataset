@@ -1,6 +1,8 @@
+#K-pop Lyric Translation Dataset
+
 This repository provides the dataset introduced in our paper titled ["K-pop Lyric Translation: Dataset, Analysis, and Neural Modelling."](https://arxiv.org/abs/2309.11093)
 
-If you find this dataset useful for your research, please consider citing our paper. (Ye we're refraining from advertising our paper as it's still under review as of December 31, 2023)
+If you find this dataset useful for your research, please consider citing our paper. (Yet, we're refraining from advertising our paper as it's still under review as of December 31, 2023)
 
 ```
 @misc{kim2023kpop,
@@ -17,7 +19,7 @@ If you have any question regarding this datset, contact me (Haven Kim) via **kha
 
 Please note that our dataset is related to alignment, not the lyrics themselves. We do not claim ownership of the lyrics in any way.
 
-1. Obtain Lyrical Text
+## 1. Obtain Lyrical Text
 To obtain lyrics for the corresponding title and artist, please refer to meta.csv and retrieve them manually. meta.csv provides metadata for 1000 songs, including the track title, artist name, and a unique ID known as LID within this dataset. However, unofficial English translations by YouTubers Emily Dimes and Serri are available for direct download from this GitHub repository, thanks to their generosity.
 
 We provide an example code for retrieving lyrics using the Genius Lyrics API and refining them. To execute the code, follow these steps:
@@ -46,7 +48,7 @@ repository
 ├── symbol.json
 
 
-2. Match Symbolic Data to Lyrical Text
+## 2. Match Symbolic Data to Lyrical Text
 In symbol.json, lyrics for one song consists of a series of lists. Each list consists of multiple strings, and each string corresponds to a single line, represented as te initial words as well as the first and last words. For example, consider the following lyrics, which comprised of 5 sections and 20 lines. 
 ```
 Twinkle, twinkle, little star,
