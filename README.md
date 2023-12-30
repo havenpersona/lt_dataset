@@ -31,20 +31,20 @@ python refine.py
 
 Once you've completed the download, your directory structure should resemble the following:
 
-repository
-├── lyrics
-│   ├── 001en.txt
-│   ├── 001kr.txt
-│   ├── 002en.txt
-│   ├── 002kr.txt
-│   ├── .
-│   ├── .
-│   ├── 1000en.txt
-│   ├── 1000kr.txt
-├── crawl.py
-├── match.py
-├── meta.csv
-├── refine.py
+repository<br>
+├── lyrics<br>
+│   ├── 001en.txt<br>
+│   ├── 001kr.txt<br>
+│   ├── 002en.txt<br>
+│   ├── 002kr.txt<br>
+│   ├── .<br>
+│   ├── .<br>
+│   ├── 1000en.txt<br>
+│   ├── 1000kr.txt<br>
+├── crawl.py<br>
+├── match.py<br>
+├── meta.csv<br>
+├── refine.py<br>
 ├── symbol.json
 
 
