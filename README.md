@@ -98,5 +98,6 @@ As of January 1, 2024, I plan to regularly update and improve this repository. I
 
 <br>
 <br>
+
 ## Acknowledgements
 We sincerely appreciate [Serri](https://www.youtube.com/channel/UCRbno5ZQiMrp5lSx95NYLHQ) and [Emily Dimes](https://www.youtube.com/@EmilyDimes) for allowing us to feature their English translations in this GitHub repository. Scholars interested in lyric translation should definitely check out their channels.
