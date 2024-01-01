@@ -2,7 +2,7 @@
 
 This repository provides the dataset introduced in our paper titled ["K-pop Lyric Translation: Dataset, Analysis, and Neural Modelling."](https://arxiv.org/abs/2309.11093)
 
-If you find this dataset useful for your research, please consider citing our paper. (Yet, we're refraining from advertising our paper as it's still under review as of December 31, 2023)
+If you find this dataset useful for your research, please consider citing our paper. (Yet, we're refraining from advertising our paper as it's still under review as of January 1, 2024)
 
 ```
 @misc{kim2023kpop,
@@ -20,36 +20,39 @@ If you have any question regarding this datset, contact me (Haven Kim) via **kha
 Please note that our dataset is related to alignment, not the lyrics themselves. We do not claim ownership of the lyrics in any way.
 
 ## 1. Obtain Lyrical Text
-To obtain lyrics for the corresponding title and artist, please refer to meta.csv and retrieve them manually. meta.csv provides metadata for 1000 songs, including the track title, artist name, and a unique ID known as LID within this dataset. However, unofficial English translations by YouTubers Emily Dimes and Serri are available for direct download from this GitHub repository, thanks to their generosity.
+To obtain lyrics for the corresponding title and artist, please refer to meta.csv and retrieve them manually. meta.csv provides metadata for 1000 songs, including the track title, artist name, and a unique ID, called LID within this dataset. However, unofficial English translations by YouTubers Emily Dimes and Serri are available for direct download from this GitHub repository, thanks to their generosity.
 
-We provide an example code for retrieving lyrics using the Genius Lyrics API and refining them. To execute the code, follow these steps:
-
+We provide an example code for retrieving lyrics using the Genius Lyrics API. 
+Before running the code, you need to obtain your genius token by signing up at [https://genius.com/](https://genius.com/).
+To execute the code, follow these steps:
 ```
+pip install lyricsgenius
 python crawl.py
-python refine.py
 ```
 
 Once you've completed the download, your directory structure should resemble the following:
 
 repository<br>
-├── lyrics<br>
+├── unprocessed_lyrics<br>
 │   ├── 001en.txt<br>
 │   ├── 001kr.txt<br>
 │   ├── 002en.txt<br>
 │   ├── 002kr.txt<br>
 │   ├── .<br>
 │   ├── .<br>
-│   ├── 1000en.txt<br>
-│   ├── 1000kr.txt<br>
+├── processed_lyrics<br>
+│   ├── 089en.txt<br>
+│   ├── 107en.txt<br>
+│   ├── .<br>
+│   ├── .<br>
 ├── crawl.py<br>
 ├── match.py<br>
 ├── meta.csv<br>
-├── refine.py<br>
 ├── symbol.json
 
 
 ## 2. Match Symbolic Data to Lyrical Text
-In symbol.json, lyrics for one song consists of a series of lists. Each list consists of multiple strings, and each string corresponds to a single line, represented as te initial words as well as the first and last words. For example, consider the following lyrics, which comprised of 5 sections and 20 lines. 
+In symbol.json, lyrics for one song consists of a series of lists. Each list consists of multiple strings, and each string corresponds to a single line, represented as initial characters, the first and last words, as well as the length of characters. For example, consider the following lyrics, which comprised of 5 sections and 20 lines. 
 ```
 Twinkle, twinkle, little star,
 How I wonder what you are!
@@ -77,14 +80,23 @@ Tho' I know not what you are,
 Twinkle, twinkle, little star.
 ```
 
-They will be represented a list that consists of 5 lists, each consists of four strings, as below.
+They will be represented a list that consists of 5 lists (which means this song consists of 5 sections), each consists of four strings, as below.
 
 ```
-[('ttls', 'twinkle', 'star'), ('hiwwya', 'how', 'are'), ('uatwsh', 'up', 'high'), ('ladits', 'like', 'sky'), ('wtbsig', 'when', 'gone'), ('whnsu', 'when', 'upon'), ('tysyll', 'then', 'light'), ('ttatn', 'twinkle', 'night'), ('tttitd', 'then', 'dark'), ('tyfyts', 'thanks', 'spark'), ('hcnswwtg', 'he', 'go'), ('iydnts', 'if', 'so'), ('itdbsyk', 'in', 'keep'), ('aotmcp', 'and', 'peep'), ('fynsye', 'for', 'eye'), ('ttsiits', 'till', 'sky'), ("'ybats", "'tis", 'spark'), ('lttitd', 'lights', 'dark'), ('tiknwya', "tho'", 'are'), ('ttls', 'twinkle', 'star')]
+[('ttls', 'twinkle', 'star', 24), ('hiwwya', 'how', 'are', 20), ('uatwsh', 'up', 'high', 21), ('ladits', 'like', 'sky', 20), ('wtbsig', 'when', 'gone', 23), ('whnsu', 'when', 'upon', 23), ('tysyll', 'then', 'light', 26), ('ttatn', 'twinkle', 'night', 25), ('tttitd', 'then', 'dark', 25), ('tyfyts', 'thanks', 'spark', 25), ('hcnswwtg', 'he', 'go', 25), ('iydnts', 'if', 'so', 20), ('itdbsyk', 'in', 'keep', 23), ('aotmcp', 'and', 'peep', 27), ('fynsye', 'for', 'eye', 22), ('ttsiits', 'till', 'sky', 20), ("'ybats", "'tis", 'spark', 26), ('lttitd', 'lights', 'dark', 27), ('tiknwya', "tho'", 'are', 22), ('ttls', 'twinkle', 'star', 24)]
 ```
 
 You will need to find the corresponding line manually. We provide an example code for matching the symbolic data to lyrical text in match.py. To execute the code, follow this step. 
 
 ```
+pip install wordninja
 python match.py
 ```
+
+As of January 1, 2024, I plan to regularly update and improve this repository. If you encounter any issues or have suggestions, please feel free to contact me at **khaven@kaist.ac.kr**. (Please understand that sometimes my reply gets delayed, but be sure to hear from me!)
+
+
+<br>
+<br>
+## Acknowledgements
+We sincerely appreciate [Serri](https://www.youtube.com/channel/UCRbno5ZQiMrp5lSx95NYLHQ) and [Emily Dimes](https://www.youtube.com/@EmilyDimes) for allowing us to feature their English translations in this GitHub repository. Scholars interested in lyric translation should definitely check out their channels.
