@@ -1,17 +1,15 @@
-# K-pop Lyric Translation Dataset
+# Korean-English Lyric Translation Dataset
 
-This repository provides the dataset introduced in our paper titled ["K-pop Lyric Translation: Dataset, Analysis, and Neural Modelling."](https://arxiv.org/abs/2309.11093)
+This repository provides the dataset introduced in our paper titled ["K-pop Lyric Translation: Dataset, Analysis, and Neural Modelling."](https://arxiv.org/abs/2309.11093) from LREC-COLING 2024.
 
-If you find this dataset useful for your research, please consider citing our paper. (Yet, we're refraining from advertising our paper as it's still under review as of January 1, 2024)
+If you find this dataset useful for your research, please consider citing our paper.
 
 ```
-@misc{kim2023kpop,
+@inproceedings{kim2024kpop,
   title={K-pop Lyric Translation: Dataset, Analysis, and Neural Modelling},
-  author={Haven Kim and Jongmin Jung and Dasaem Jeong and Juhan Nam},
-  year={2023},
-  eprint={2309.11093},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL}
+  author={Kim, Haven and Jung, Jongmin and Jeong, Dasaem and Nam, Juhan},
+  booktitle = {Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING)},
+  year={2024},
 }
 ```
 
@@ -93,11 +91,11 @@ pip install wordninja
 python match.py
 ```
 
-As of January 1, 2024, I plan to regularly update and improve this repository. If you encounter any issues or have suggestions, please feel free to contact me at **khaven@kaist.ac.kr**. (Please understand that sometimes my reply gets delayed, but be sure to hear from me!)
+As of February 22, 2024, I plan to regularly update and improve this repository. If you encounter any issues or have suggestions, please feel free to contact me at **khaven@kaist.ac.kr**. (Please understand that sometimes my reply gets delayed, but be sure to hear from me!)
 
 
 <br>
 <br>
 
 ## Acknowledgements
-We sincerely appreciate [Serri](https://www.youtube.com/channel/UCRbno5ZQiMrp5lSx95NYLHQ) and [Emily Dimes](https://www.youtube.com/@EmilyDimes) for allowing us to feature their English translations in this GitHub repository. Scholars interested in lyric translation should definitely check out their channels.
+We sincerely appreciate [Serri](https://www.youtube.com/channel/UCRbno5ZQiMrp5lSx95NYLHQ) and [Emily Dimes](https://www.youtube.com/@EmilyDimes) for allowing us to feature their English translations in this GitHub repository. Those interested in lyric translation should definitely check out their channels.
