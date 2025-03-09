@@ -13,9 +13,13 @@ If you find this dataset useful for your research, please consider citing our pa
 }
 ```
 
-If you have any question regarding this datset, contact me (Haven Kim) via **khaven@kaist.ac.kr**. (Please understand that sometimes my reply gets delayed, but be sure to hear from me!)
+### **Important: The code in this repository is outdated and may not function properly. If you'd like me to share the dataset directly, please fill out the consent form (via [Google Docs](https://docs.google.com/document/d/1eLVq-ebFz1M1eb2IG_XcLZvaeyN8GSGFneK-9C8BiGg/edit?usp=sharing)) and email me at khaven@ucsd.edu. I'll share it with you as soon as possible.**
+
+If you have any question regarding this datset, contact me (Haven Kim) via khaven@ucsd.edu. (Please understand that sometimes my reply gets delayed, but be sure to hear from me!)
 
 Please note that our dataset is related to alignment, not the lyrics themselves. We do not claim ownership of the lyrics in any way.
+
+--------------------------------------------------------------------------------------------------------------------------------
 
 ## 1. Obtain Lyrical Text
 To obtain lyrics for the corresponding title and artist, please refer to meta.csv and retrieve them manually. meta.csv provides metadata for 1000 songs, including the track title, artist name, and a unique ID, called LID within this dataset. However, unofficial English translations by YouTubers Emily Dimes and Serri are available for direct download from this GitHub repository, thanks to their generosity.
